@@ -1,0 +1,243 @@
+/* General Reset and Base Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    margin: 0;
+}
+
+.container {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 700px;
+    padding: 30px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* Summary Section Styling */
+.summary {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    border: 1px solid #eee;
+    padding: 10px;
+    border-radius: 6px;
+    background-color: #f9f9f9;
+}
+
+.summary-box {
+    text-align: center;
+    padding: 15px;
+    flex-basis: 30%;
+    border-radius: 4px;
+    border-top: 5px solid;
+}
+
+.summary-box span {
+    font-size: 14px;
+    color: #555;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.summary-box p {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.income {
+    border-color: #4CAF50; /* Green line */
+}
+
+.expenses {
+    border-color: #F44336; /* Red line */
+}
+
+.balance {
+    border-color: #2196F3; /* Blue line (Net Balance) */
+}
+
+/* Form Styling */
+#expense-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 10px;
+    margin-bottom: 30px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.input-group label {
+    font-size: 12px;
+    margin-bottom: 5px;
+    color: #666;
+}
+
+#expense-form input, #expense-form select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.submit-btn {
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.submit-btn:hover {
+    background-color: #45a049;
+}
+
+/* Transactions and Filter Styling */
+.transactions-header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+#filter-type {
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-left: 10px;
+}
+
+.transaction-list {
+    list-style: none;
+    padding: 0;
+}
+
+.transaction-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.transaction-item:last-child {
+    border-bottom: none;
+}
+
+.transaction-details {
+    display: flex;
+    flex-grow: 1;
+    gap: 20px;
+    align-items: center;
+}
+
+.transaction-description {
+    flex-basis: 50%;
+    font-weight: 500;
+}
+
+.transaction-amount {
+    flex-basis: 20%;
+    text-align: right;
+    font-weight: bold;
+}
+
+.transaction-type {
+    flex-basis: 10%;
+    text-align: center;
+    font-size: 12px;
+    padding: 3px 6px;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+.type-income {
+    color: #4CAF50;
+    border: 1px solid #4CAF50;
+    background-color: #e8f5e9;
+}
+
+.type-expense {
+    color: #F44336;
+    border: 1px solid #F44336;
+    background-color: #ffebee;
+}
+
+.transaction-actions button {
+    padding: 8px 12px;
+    margin-left: 5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    color: white;
+    transition: opacity 0.2s;
+}
+
+.transaction-actions button:hover {
+    opacity: 0.8;
+}
+
+.edit-btn {
+    background-color: #00BCD4; /* Cyan/Teal for Edit */
+}
+
+.delete-btn {
+    background-color: #F44336; /* Red for Delete */
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .summary {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .summary-box {
+        flex-basis: 100%;
+        padding: 10px;
+    }
+
+    #expense-form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .input-group {
+        margin-bottom: 10px;
+    }
+
+    .transaction-item {
+        flex-wrap: wrap;
+    }
+
+    .transaction-details {
+        flex-basis: 100%;
+        margin-bottom: 10px;
+    }
+
+    .transaction-description, .transaction-amount {
+        flex-basis: auto;
+    }
+}
