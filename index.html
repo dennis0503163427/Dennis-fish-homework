@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Wallet Watch</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Wallet Watch</h1>
+
+        <div class="summary">
+            <div class="summary-box income">
+                <span>Total Income:</span>
+                <p id="total-income">$0.00</p>
+            </div>
+            <div class="summary-box expenses">
+                <span>Total Expenses:</span>
+                <p id="total-expenses">$0.00</p>
+            </div>
+            <div class="summary-box balance">
+                <span>Net Balance:</span>
+                <p id="net-balance">$0.00</p>
+            </div>
+        </div>
+
+        <form id="expense-form">
+            <div class="input-group">
+                <label for="description">Description:</label>
+                <input type="text" id="description" placeholder="Description" required>
+            </div>
+            <div class="input-group">
+                <label for="amount">Amount:</label>
+                <input type="number" id="amount" placeholder="Amount" step="0.01" required>
+            </div>
+            <div class="input-group">
+                <label for="type">Type:</label>
+                <select id="type" required>
+                    <option value="Income">Income</option>
+                    <option value="Expense">Expense</option>
+                </select>
+            </div>
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+
+        <div class="transactions-header">
+            <label for="filter-type">Filter By:</label>
+            <select id="filter-type">
+                <option value="All">All</option>
+                <option value="Income">Income</option>
+                <option value="Expense">Expense</option>
+            </select>
+        </div>
+
+        <ul id="transaction-list" class="transaction-list">
+            </ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
